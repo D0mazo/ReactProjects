@@ -1,0 +1,28 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .shape {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .circle {
+    border-radius: 50%;
+  }
+  
+  .rectangle {
+    border-radius: 0;
+  }
+  
+  button {
+    margin: 10px;
+  }

@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [isCircle, setIsCircle] = useState(true);
+
+  const toggleShape = () => {
+    setIsCircle((prevIsCircle) => !prevIsCircle);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className={isCircle ? 'shape circle' : 'shape square'}></div>
+      <button onClick={toggleShape}>Pakeisti</button>
     </div>
   );
-}
+
+
+};
 
 export default App;
